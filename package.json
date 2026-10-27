@@ -1,0 +1,15 @@
+{
+  "name": "preparationai-si",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PreparationAI marketing site (static) deployed on Cloudflare Workers",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "dev": "wrangler dev",
+    "deploy": "node scripts/check.mjs && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
