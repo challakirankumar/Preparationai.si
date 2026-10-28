@@ -10,8 +10,9 @@ Static marketing site for PreparationAI, deployed on Cloudflare Workers (static 
 │   ├── index.html          page markup
 │   ├── 404.html            shown for unknown URLs
 │   ├── css/styles.css      all styling
-│   ├── js/main.js          animations, step panel, copy button (page still reads fine without it)
-│   ├── assets/img/         logos, favicons, social preview image
+│   ├── js/main.js          all page content and interactivity (orbit, agents, exams, timeline,
+│   │                       voices, FAQ, command palette ⌘K, app console, day/night theme)
+│   ├── assets/img/         logos (logo-mark.png is the brain/cap mark), favicons, social preview image
 │   ├── favicon.ico  robots.txt  sitemap.xml
 │   └── _headers            security and cache headers
 ├── scripts/check.mjs       pre-push safety check

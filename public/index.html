@@ -1,123 +1,514 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PreparationAI — SI (Super Intelligence) for every exam</title>
-<meta name="theme-color" content="#f5f8fd">
-<meta name="format-detection" content="telephone=no">
-<script>document.documentElement.className+=" js"</script>
-<meta name="description" content="PreparationAI runs on SI (Super Intelligence): 11 specialised agents for exam prep, admissions, scholarships and career coaching. Real exam patterns, AI mock papers, and a video fix for every weak topic.">
-<link rel="canonical" href="https://preparationai.si/">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="PreparationAI">
-<meta property="og:title" content="PreparationAI — SI (Super Intelligence) for every exam">
-<meta property="og:description" content="Eleven specialised agents for exam prep, admissions, scholarships and career coaching, with real exam patterns and a video fix for every weak topic.">
-<meta property="og:url" content="https://preparationai.si/">
-<meta property="og:image" content="https://preparationai.si/assets/img/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700;800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700;800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="css/styles.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Preparation AI — SI (Super Intelligence) for every exam</title>
+<meta name="description" content="Preparation AI runs on SI (Super Intelligence): eleven specialised agents that turn real exam patterns into mock papers, find the exact topics holding your score back, and fix them with targeted resources. 17+ exams, 3PL IRT psychometrics, NTA UFM proctoring." />
+<meta name="keywords" content="Preparation AI, AI Educational Operating System, mock exams, JEE, NEET, UPSC, GATE, CAT, GRE, SAT, IELTS, AI agents, adaptive learning, psychometrics" />
+<meta name="author" content="Kiran Challa" />
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F7F8FB" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#050914" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Preparation AI" />
+<meta property="og:title" content="Preparation AI — SI for every exam" />
+<meta property="og:description" content="Eleven specialised agents. One Super Intelligence. Prepare with SI, outthink every exam." />
+<meta property="og:url" content="https://preparationai.si/" />
+<meta property="og:image" content="https://preparationai.si/assets/img/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Preparation AI — SI (Super Intelligence) for every exam" />
+<meta name="twitter:description" content="Eleven specialised agents. One Super Intelligence. Prepare with SI, outthink every exam." />
+<meta name="twitter:image" content="https://preparationai.si/assets/img/og-image.png" />
+<link rel="canonical" href="https://preparationai.si/" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+<link rel="icon" href="favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+<link rel="preload" as="image" href="assets/img/logo-mark.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-<div id="pg"></div>
-<div class="aur"><i></i><i></i><i></i></div>
-<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="ig" gradientUnits="userSpaceOnUse" x1="2" y1="2" x2="22" y2="22"><stop offset="0" stop-color="#224184"/><stop offset="1" stop-color="#0891b2"/></linearGradient>
-<symbol id="insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></symbol>
-<symbol id="heart" viewBox="0 0 24 24"><path d="M12 21s-8.5-5.2-8.5-11.2A4.8 4.8 0 0 1 12 7a4.8 4.8 0 0 1 8.5 2.8C20.5 15.8 12 21 12 21z" fill="#f0364f"/></symbol></defs></svg>
+<script>
+/* no-flash theme — applied before first paint */
+(function () {
+  try {
+    if (localStorage.getItem("paip:theme") === "dark") document.documentElement.classList.add("dark");
+  } catch (e) {}
+})();
+</script>
 
-<nav>
-  <a class="brand" href="#top"><span class="mk" role="img" aria-label="PreparationAI logo"></span><span class="bt">Preparation<span class="ai">AI</span></span></a>
-  <ul><li><a href="#how">How it works</a></li><li><a href="#agents">11 Agents</a></li><li><a href="#why">Why it works</a></li><li><a href="#contact">Contact</a></li></ul>
-  <div class="nr"><a class="ig" href="https://www.instagram.com/preparation.ai/" target="_blank" rel="noopener" aria-label="PreparationAI on Instagram"><svg><use href="#insta"/></svg></a><button class="btn p" type="button" style="cursor:default">Try it free</button></div>
-</nav>
+<!-- ============ AMBIENT BACKGROUND ============ -->
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none">
+  <div class="paper-base" style="position:absolute;inset:0"></div>
+  <div class="orb orb-a" style="left:-8%;top:-12%;width:520px;height:520px;background:radial-gradient(circle,rgba(56,189,248,0.30),transparent 65%)"></div>
+  <div class="orb orb-b" style="right:-10%;top:6%;width:560px;height:560px;background:radial-gradient(circle,rgba(14,165,233,0.22),transparent 65%)"></div>
+  <div class="orb orb-c" style="left:22%;top:38%;width:600px;height:600px;background:radial-gradient(circle,rgba(212,175,55,0.14),transparent 65%)"></div>
+  <div class="orb orb-a" style="right:16%;top:62%;width:640px;height:640px;background:radial-gradient(circle,rgba(125,211,252,0.20),transparent 65%)"></div>
+  <div class="orb orb-b" style="left:-6%;bottom:-18%;width:560px;height:560px;background:radial-gradient(circle,rgba(13,148,136,0.13),transparent 65%)"></div>
+  <div class="horizon" style="position:absolute;left:50%;top:6%;width:1150px;height:620px;transform:translateX(-50%)"></div>
+  <div class="horizon-b" style="position:absolute;bottom:-12%;left:50%;width:1150px;height:620px;transform:translateX(-50%)"></div>
+  <div class="bg-grid" style="position:absolute;inset:0"></div>
+  <div class="bg-dots" style="position:absolute;inset:0"></div>
+  <div class="bg-dots-b" style="position:absolute;inset:0"></div>
+  <div class="beam-top" style="position:absolute;left:50%;top:0;width:860px;height:420px;transform:translateX(-50%)"></div>
+  <div class="vignette" style="position:absolute;inset:0"></div>
+  <div class="grain" style="position:absolute;inset:0;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;)"></div>
+</div>
 
-<header class="hero" id="top"><div class="wrap">
-  <div>
-    <span class="pill glass"><i></i>SI · Super Intelligence · 11 agents working 24/7</span>
-    <h1>Prepare with <span class="si"><span class="st">SI.</span></span> <span>Outthink every exam.</span></h1>
-    <p class="lead">PreparationAI runs on SI (Super Intelligence): eleven specialised agents that turn real exam patterns into mock papers, find the exact topics holding your score back, and hand you a video to fix each one. It also guides admissions, scholarships and career choices.</p>
-    <div class="cta"><a class="btn p" href="https://preparation-ai.vercel.app" target="_blank" rel="noopener">Start preparing</a><a class="btn g" href="#how">See how it works</a><a class="ig" href="https://www.instagram.com/preparation.ai/" target="_blank" rel="noopener" aria-label="PreparationAI on Instagram"><svg><use href="#insta"/></svg></a></div>
-    <div class="trust"><div class="glass lift"><b>11</b><small>specialised SI agents</small></div><div class="glass lift"><b>10+</b><small>major exams covered</small></div><div class="glass lift"><b>24/7</b><small>coaching, any timezone</small></div></div>
-  </div>
-  <div class="ow"><div class="orbit" id="orbit" aria-label="Eleven AI agents orbiting the PreparationAI logo"><div class="rg rg1"></div><div class="rg rg2"></div><div class="rg rg3"><i class="sw"></i><i class="sd"></i></div><div class="core"><span class="mk" role="img" aria-label="PreparationAI"></span></div><div class="rot"><div class="node" style="transform:rotate(0.000deg)"><i class="cr"><i class="up" style="transform:rotate(-0.000deg)"><b class="tile" data-n="Mock Exam Builder"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M7 3h7l4 4v14H7z"/><path pathLength="1" d="M14 3v4h4"/><path pathLength="1" d="M9.5 12h6M9.5 15h6M9.5 18h3"/></svg></b></i></i></div><div class="node" style="transform:rotate(32.727deg)"><i class="cr"><i class="up" style="transform:rotate(-32.727deg)"><b class="tile" data-n="Syllabus Weightage"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle pathLength="1" cx="12" cy="12" r="9"/><path pathLength="1" d="M12 12V3"/><path pathLength="1" class="a" d="M12 12l6.4 6.4"/></svg></b></i></i></div><div class="node" style="transform:rotate(65.455deg)"><i class="cr"><i class="up" style="transform:rotate(-65.455deg)"><b class="tile" data-n="Gap Analyser"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle pathLength="1" cx="12" cy="12" r="9"/><circle pathLength="1" cx="12" cy="12" r="5"/><circle pathLength="1" class="a" cx="12" cy="12" r="1.2"/></svg></b></i></i></div><div class="node" style="transform:rotate(98.182deg)"><i class="cr"><i class="up" style="transform:rotate(-98.182deg)"><b class="tile" data-n="YouTube Fixer"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect pathLength="1" x="3" y="5.5" width="18" height="13" rx="4"/><path pathLength="1" class="a" d="M10.2 9.3v5.4l4.6-2.7z"/></svg></b></i></i></div><div class="node" style="transform:rotate(130.909deg)"><i class="cr"><i class="up" style="transform:rotate(-130.909deg)"><b class="tile" data-n="Study Planner"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect pathLength="1" x="3.5" y="5" width="17" height="15" rx="3"/><path pathLength="1" d="M3.5 10h17M8 3v4M16 3v4"/><path pathLength="1" class="a" d="M8 14h3"/></svg></b></i></i></div><div class="node" style="transform:rotate(163.636deg)"><i class="cr"><i class="up" style="transform:rotate(-163.636deg)"><b class="tile" data-n="Progress Tracker"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 20h17"/><path pathLength="1" d="M7 16v-4M12 16V7"/><path pathLength="1" class="a" d="M17 16v-6"/></svg></b></i></i></div><div class="node" style="transform:rotate(196.364deg)"><i class="cr"><i class="up" style="transform:rotate(-196.364deg)"><b class="tile" data-n="Doubt Solver"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 5h16v11H9l-5 4z"/><path pathLength="1" d="M9.8 9.3a2.3 2.3 0 1 1 3.2 2.1c-.6.3-1 .8-1 1.4"/><path pathLength="1" class="a" d="M12 14.8v.1"/></svg></b></i></i></div><div class="node" style="transform:rotate(229.091deg)"><i class="cr"><i class="up" style="transform:rotate(-229.091deg)"><b class="tile" data-n="Exam Pattern Guide"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle pathLength="1" cx="12" cy="12" r="9"/><path pathLength="1" class="a" d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></b></i></i></div><div class="node" style="transform:rotate(261.818deg)"><i class="cr"><i class="up" style="transform:rotate(-261.818deg)"><b class="tile" data-n="Admissions Advisor"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M2.5 9.5L12 5l9.5 4.5L12 14z"/><path pathLength="1" d="M6.5 11.5v4.2c0 1.3 2.5 2.8 5.5 2.8s5.5-1.5 5.5-2.8v-4.2"/><path pathLength="1" class="a" d="M21.5 9.5v5"/></svg></b></i></i></div><div class="node" style="transform:rotate(294.545deg)"><i class="cr"><i class="up" style="transform:rotate(-294.545deg)"><b class="tile" data-n="Scholarship Finder"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle pathLength="1" cx="12" cy="9" r="5.5"/><path pathLength="1" class="a" d="M8.7 13.6L7.5 21l4.5-2.5 4.5 2.5-1.2-7.4"/></svg></b></i></i></div><div class="node" style="transform:rotate(327.273deg)"><i class="cr"><i class="up" style="transform:rotate(-327.273deg)"><b class="tile" data-n="Career Coach"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M12 3c3.5 2 5.5 5.5 5.5 9.5L12 17l-5.5-4.5C6.5 8.5 8.5 5 12 3z"/><circle pathLength="1" class="a" cx="12" cy="10" r="1.8"/><path pathLength="1" d="M8 15l-3 1 1-3M16 15l3 1-1-3M12 17v4"/></svg></b></i></i></div></div></div></div>
-</div></header>
-
-<div class="marq" aria-label="Exams covered"><div id="mq"><span>JEE</span><span>NEET</span><span>GRE</span><span>GMAT</span><span>GATE</span><span>UPSC</span><span>SAT</span><span>IELTS</span><span>TOEFL</span><span>CAT</span><span>JEE</span><span>NEET</span><span>GRE</span><span>GMAT</span><span>GATE</span><span>UPSC</span><span>SAT</span><span>IELTS</span><span>TOEFL</span><span>CAT</span><span>JEE</span><span>NEET</span><span>GRE</span><span>GMAT</span><span>GATE</span><span>UPSC</span><span>SAT</span><span>IELTS</span><span>TOEFL</span><span>CAT</span><span>JEE</span><span>NEET</span><span>GRE</span><span>GMAT</span><span>GATE</span><span>UPSC</span><span>SAT</span><span>IELTS</span><span>TOEFL</span><span>CAT</span></div></div>
-
-<section id="how"><div class="wrap">
-  <span class="kick rv">How it works</span>
-  <h2 class="rv">From a test result to a clear <span class="se">next step.</span></h2>
-  <p class="lead rv">Most platforms stop at a score. PreparationAI keeps going until the weak topic is fixed. Select a step to see it.</p>
-  <div class="flow">
-    <div class="steps rv" id="steps"><div class="glass lift step" data-i="0" tabindex="0" role="button"><em>1</em><div><h3>Take a mock test</h3><p>An AI-built paper that mirrors the real exam.</p></div></div><div class="glass lift step on" data-i="1" tabindex="0" role="button"><em>2</em><div><h3>See your gaps</h3><p>Topic-level analytics, not just one score.</p></div></div><div class="glass lift step" data-i="2" tabindex="0" role="button"><em>3</em><div><h3>Watch the fix</h3><p>A targeted video for the exact weak topic.</p></div></div><div class="glass lift step" data-i="3" tabindex="0" role="button"><em>4</em><div><h3>Retake and improve</h3><p>Track the same topics as they climb.</p></div></div></div>
-    <div class="demo glass rv live" id="demo">
-      <div class="win"><b class="d"></b><b class="d"></b><b class="d"></b><span><i class="lv"></i>SI · live analysis</span></div>
-      <h3 id="dt">Topic strength</h3><small id="ds">Where you stand right now</small>
-      <div class="bars" id="bars"><div class="bar"><b><span>Algebra</span><span>78%</span></b><i><u data-w="78" style="width:78%"></u></i></div><div class="bar"><b><span>Trigonometry</span><span>64%</span></b><i><u data-w="64" style="width:64%"></u></i></div><div class="bar low"><b><span>Probability</span><span>41%</span></b><i><u data-w="41" style="width:41%"></u></i></div><div class="bar low"><b><span>Calculus</span><span>28%</span></b><i><u data-w="28" style="width:28%"></u></i></div></div>
-      <div class="fix" id="fix">Priority: Calculus and Probability carry the biggest score gain.</div>
-      <span class="tag">Illustrative preview of the product experience</span>
+<!-- ============ NAV ============ -->
+<div class="progress-beam" id="progressBeam" aria-hidden="true"></div>
+<header class="site-header" id="siteHeader">
+  <nav class="site-nav glass-soft" id="siteNav" aria-label="Main navigation">
+    <a href="#top" class="brand focus-ring" aria-label="Preparation AI — back to top">
+      <span class="logo-blend"><span class="logo-img" role="img" aria-label="Preparation AI logo — graduation cap over a neural-network brain"></span></span>
+      <span class="brand-name">Preparation<span class="text-gradient-brand">AI</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#how" class="focus-ring nav-link">How it works</a></li>
+      <li><a href="#agents" class="focus-ring nav-link">Agents</a></li>
+      <li><a href="#exams" class="focus-ring nav-link">Exams</a></li>
+      <li><a href="#why" class="focus-ring nav-link">Why SI</a></li>
+      <li><a href="#journey" class="focus-ring nav-link">Journey</a></li>
+      <li><a href="#voices" class="focus-ring nav-link">Voices</a></li>
+      <li><a href="#contact" class="focus-ring nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button type="button" class="search-pill glass-soft pill-hover focus-ring" id="searchPill" aria-label="Open the command menu" title="Search everything — ⌘K">
+        <span data-ic="search" data-ics="15"></span>
+        <span>Search</span>
+        <kbd>⌘K</kbd>
+      </button>
+      <button type="button" class="icon-btn search-icon-btn glass-soft pill-hover focus-ring" id="searchIconBtn" aria-label="Open the command menu">
+        <span data-ic="search" data-ics="17"></span>
+      </button>
+      <button type="button" class="icon-btn glass-soft pill-hover focus-ring" id="themeToggle" aria-label="Switch to the night edition" aria-pressed="false" title="Night edition">
+        <span id="themeIconWrap" style="position:relative;display:block;width:18px;height:18px">
+          <span data-ic="sun" data-ics="18" id="iconSun" style="position:absolute;inset:0;transition:all .5s ease"></span>
+          <span data-ic="moon" data-ics="18" id="iconMoon" style="position:absolute;inset:0;transition:all .5s ease;opacity:0;transform:rotate(-90deg) scale(.01)"></span>
+        </span>
+      </button>
+      <a href="https://www.instagram.com/preparation.ai/" target="_blank" rel="noopener noreferrer" aria-label="Preparation AI on Instagram" class="icon-btn insta-nav glass-soft pill-hover focus-ring">
+        <span data-ic="instagram" data-ics="18"></span>
+      </a>
+      <button type="button" class="open-app-nav btn-shine focus-ring" id="openAppNav">Open App <span data-ic="arrow-up-right" data-ics="16"></span></button>
+      <button type="button" class="menu-btn glass-soft focus-ring" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span data-ic="menu" data-ics="20"></span>
+      </button>
     </div>
+  </nav>
+</header>
+
+<!-- mobile sheet -->
+<div class="sheet-backdrop" id="sheetBackdrop" aria-hidden="true"></div>
+<aside class="mobile-sheet glass" id="mobileSheet" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="sheet-head">
+    <p class="t"><span class="logo-blend"><span class="logo-img" role="img" aria-label="Preparation AI logo"></span></span> Preparation<span class="text-gradient-brand">AI</span></p>
   </div>
-</div></section>
-
-<section id="agents"><div class="wrap">
-  <span class="kick rv">The agents</span>
-  <h2 class="rv">Eleven agents. One <span class="se">Super Intelligence.</span></h2>
-  <p class="lead rv">Each agent owns one job, from building the mock paper to finding a scholarship, and they share what they learn about you.</p>
-  <div class="grid" id="grid"><div class="glass lift ag rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M7 3h7l4 4v14H7z"/><path pathLength="1" d="M14 3v4h4"/><path pathLength="1" d="M9.5 12h6M9.5 15h6M9.5 18h3"/></svg></div><h3>Mock Exam Builder</h3><p>Generates full mock papers that follow each exam's real pattern.</p></div><div class="glass lift ag rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle pathLength="1" cx="12" cy="12" r="9"/><path pathLength="1" d="M12 12V3"/><path pathLength="1" class="a" d="M12 12l6.4 6.4"/></svg></div><h3>Syllabus Weightage</h3><p>Shows which chapters carry the most marks so you plan smarter.</p></div><div class="glass lift ag rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle pathLength="1" cx="12" cy="12" r="9"/><circle pathLength="1" cx="12" cy="12" r="5"/><circle pathLength="1" class="a" cx="12" cy="12" r="1.2"/></svg></div><h3>Gap Analyser</h3><p>Finds the exact topics where your score is leaking.</p></div><div class="glass lift ag rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect pathLength="1" x="3" y="5.5" width="18" height="13" rx="4"/><path pathLength="1" class="a" d="M10.2 9.3v5.4l4.6-2.7z"/></svg></div><h3>YouTube Fixer</h3><p>Surfaces a targeted video for every weak topic.</p></div><div class="glass lift ag rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect pathLength="1" x="3.5" y="5" width="17" height="15" rx="3"/><path pathLength="1" d="M3.5 10h17M8 3v4M16 3v4"/><path pathLength="1" class="a" d="M8 14h3"/></svg></div><h3>Study Planner</h3><p>Builds a day-by-day plan around your exam date.</p></div><div class="glass lift ag rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 20h17"/><path pathLength="1" d="M7 16v-4M12 16V7"/><path pathLength="1" class="a" d="M17 16v-6"/></svg></div><h3>Progress Tracker</h3><p>Tracks topic strength across every test you take.</p></div><div class="glass lift ag rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 5h16v11H9l-5 4z"/><path pathLength="1" d="M9.8 9.3a2.3 2.3 0 1 1 3.2 2.1c-.6.3-1 .8-1 1.4"/><path pathLength="1" class="a" d="M12 14.8v.1"/></svg></div><h3>Doubt Solver</h3><p>Explains answers step by step, any time of day.</p></div><div class="glass lift ag rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle pathLength="1" cx="12" cy="12" r="9"/><path pathLength="1" class="a" d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div><h3>Exam Pattern Guide</h3><p>Explains format, marking and sections for each exam.</p></div><div class="glass lift ag rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M2.5 9.5L12 5l9.5 4.5L12 14z"/><path pathLength="1" d="M6.5 11.5v4.2c0 1.3 2.5 2.8 5.5 2.8s5.5-1.5 5.5-2.8v-4.2"/><path pathLength="1" class="a" d="M21.5 9.5v5"/></svg></div><h3>Admissions Advisor</h3><p>Guides university choices and application steps.</p></div><div class="glass lift ag rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle pathLength="1" cx="12" cy="9" r="5.5"/><path pathLength="1" class="a" d="M8.7 13.6L7.5 21l4.5-2.5 4.5 2.5-1.2-7.4"/></svg></div><h3>Scholarship Finder</h3><p>Matches your profile with scholarships worth applying for.</p></div><div class="glass lift ag rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M12 3c3.5 2 5.5 5.5 5.5 9.5L12 17l-5.5-4.5C6.5 8.5 8.5 5 12 3z"/><circle pathLength="1" class="a" cx="12" cy="10" r="1.8"/><path pathLength="1" d="M8 15l-3 1 1-3M16 15l3 1-1-3M12 17v4"/></svg></div><h3>Career Coach</h3><p>Connects your strengths to career paths you can act on.</p></div></div>
-</div></section>
-
-<section id="why"><div class="wrap">
-  <span class="kick rv">Why it works</span>
-  <h2 class="rv">Built to be <span class="se">trusted,</span> not just clicked.</h2>
-  <div class="why">
-    <div class="glass lift rv"><span class="big">Real</span><h3>Real exam patterns</h3><p>Mock papers follow how each exam is actually set, with syllabus weightage so you spend time where marks are.</p></div>
-    <div class="glass lift rv"><span class="big">Topic</span><h3>Topic-level analytics</h3><p>Not just a percentage. You see which topics are strong, which are slipping, and what changed since your last test.</p></div>
-    <div class="glass lift rv"><span class="big">Fix</span><h3>A fix for every gap</h3><p>Each weak topic is paired with a targeted YouTube resource, so a result always ends in a next action.</p></div>
-    <div class="glass lift rv"><span class="big">Path</span><h3>Beyond the exam</h3><p>Admissions, scholarships and career coaching sit in the same place, so your prep connects to where you are heading.</p></div>
+  <div class="sheet-body">
+    <a href="#how" class="sheet-link g-rail">How it works</a>
+    <a href="#agents" class="sheet-link g-rail">Agents</a>
+    <a href="#exams" class="sheet-link g-rail">Exams</a>
+    <a href="#why" class="sheet-link g-rail">Why SI</a>
+    <a href="#journey" class="sheet-link g-rail">Journey</a>
+    <a href="#voices" class="sheet-link g-rail">Voices</a>
+    <a href="#contact" class="sheet-link g-rail">Contact</a>
+    <div class="sheet-cta">
+      <button type="button" class="cta btn-shine" id="sheetOpenApp">Open the App <span data-ic="arrow-up-right" data-ics="16"></span></button>
+    </div>
+    <a href="https://www.instagram.com/preparation.ai/" target="_blank" rel="noopener noreferrer" class="sheet-insta g-rail">
+      <span data-ic="instagram" data-ics="16"></span> @preparation.ai
+    </a>
   </div>
-</div></section>
+</aside>
 
-<section style="padding-top:20px"><div class="wrap">
-  <span class="kick rv">Who it's for</span>
-  <h2 class="rv">One platform, three kinds of people.</h2>
-  <div class="aud">
-    <div class="glass lift rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M2.5 9.5L12 5l9.5 4.5L12 14z"/><path pathLength="1" d="M6.5 11.5v4.2c0 1.3 2.5 2.8 5.5 2.8s5.5-1.5 5.5-2.8v-4.2"/><path pathLength="1" class="a" d="M21.5 9.5v5"/></svg></div><h3>Students</h3><p>Practise on realistic papers, see exactly which topics to fix, and plan the next step after the exam.</p></div>
-    <div class="glass lift rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M3 21h18M5 21V9l7-5 7 5v12"/><path pathLength="1" class="a" d="M9 21v-6h6v6M9.5 11h5"/></svg></div><h3>Schools and coaching centres</h3><p>Give every student topic-level insight and targeted resources without adding to teachers' workload.</p></div>
-    <div class="glass lift rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle pathLength="1" cx="9" cy="12" r="5"/><circle pathLength="1" class="a" cx="15" cy="12" r="5"/></svg></div><h3>Partners and investors</h3><p>A modular foundation built to scale across exams, institutions and markets in India and the Gulf.</p></div>
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="hero-badge glass-soft pill-hover rv" style="display:inline-flex">
+            <span class="si"><span data-ic="sparkles" data-ics="12"></span> SI</span>
+            <span class="lbl">AI Educational Operating System</span>
+          </span>
+          <h1 class="hero-h1 rv" style="transition-delay:.08s">
+            Prepare with <span class="text-gradient-brand">SI.</span><br />
+            Outthink<span class="se text-gradient-gold"> every exam.</span>
+          </h1>
+          <p class="hero-p rv" style="transition-delay:.16s">
+            Preparation AI runs on <strong>SI — Super Intelligence</strong>: eleven specialised agents
+            that turn real exam patterns into mock papers, find the exact topics holding your score
+            back, and fix them with targeted resources. From a test result to a clear next step —
+            every single time.
+          </p>
+          <div class="hero-ctas rv" style="transition-delay:.24s">
+            <button type="button" class="cta btn-shine focus-ring" id="heroOpenApp">
+              Open the App <span data-ic="arrow-right" data-ics="18"></span>
+            </button>
+            <a href="#how" class="g-btn g-btn-hero focus-ring">
+              Explore the intelligence
+            </a>
+          </div>
+          <dl class="hero-stats rv" style="transition-delay:.32s" id="heroStats"></dl>
+        </div>
+        <div class="hero-visual">
+          <div class="orbit-stage">
+            <div class="orbit-field" aria-hidden="true"></div>
+            <div class="orbit" id="orbit" role="img" aria-label="Eleven AI agents riding the orbit line around the Preparation AI medallion — the Super Intelligence network">
+              <div class="ticks" aria-hidden="true"></div>
+              <div class="track" aria-hidden="true"></div>
+              <div class="line" aria-hidden="true"></div>
+              <div class="core">
+                <span class="aura" aria-hidden="true"></span>
+                <span class="medal" aria-hidden="true"><span class="medal-rim" aria-hidden="true"></span></span>
+                <span class="mk"><span class="mk-shadow" aria-hidden="true"></span></span>
+              </div>
+              <div class="rot" id="orbitRot"></div>
+            </div>
+            <p class="orbit-caption">Eleven agents · one Super Intelligence · tap a coin to inspect</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <section class="marquee" aria-label="Supported exams">
+    <div class="marquee-mask marquee-viewport">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+    <p class="marquee-note">Calibrated to real exam patterns</p>
+  </section>
+
+  <!-- ============ HOW ============ -->
+  <section class="sec" id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker glass-soft pill-hover rv"><span class="dot"></span>How it works</span>
+        <h2 class="sec-title rv" style="transition-delay:.08s">From a test result to a <span class="se text-gradient-brand">clear next step.</span></h2>
+        <p class="sec-lead rv" style="transition-delay:.16s">Most platforms stop at a score. Preparation AI keeps going until the weak topic is fixed. Select a step to see it.</p>
+      </div>
+      <div class="how-grid rv" id="howGrid" style="transition-delay:.1s">
+        <div class="how-steps" id="howSteps"></div>
+        <div class="how-panel glass" id="howPanel">
+          <div class="halo" aria-hidden="true"></div>
+          <div id="howPanelBody"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AGENTS ============ -->
+  <section class="sec" id="agents">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker glass-soft pill-hover rv"><span class="dot"></span>The SI Suite</span>
+        <h2 class="sec-title rv" style="transition-delay:.08s">Eleven agents. <span class="se text-gradient-brand">One Super Intelligence.</span></h2>
+        <p class="sec-lead rv" style="transition-delay:.16s">Each agent owns one job — from building the mock paper to finding a scholarship — and they share what they learn about you. Tap any agent to inspect it.</p>
+      </div>
+      <div class="agents-grid" id="agentsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ EXAMS ============ -->
+  <section class="sec" id="exams">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker glass-soft pill-hover rv"><span class="dot"></span>Exam coverage</span>
+        <h2 class="sec-title rv" style="transition-delay:.08s">Real exam patterns, <span class="se text-gradient-brand">calibrated.</span></h2>
+        <p class="sec-lead rv" style="transition-delay:.16s">Every mock follows the official pattern — sections, time limits, weightage and scoring penalties. Open any card for its full blueprint, or add up to three to compare them side by side.</p>
+      </div>
+      <div class="rv" style="transition-delay:.1s">
+        <div class="exam-tabs" id="examTabs"></div>
+        <div class="exam-search glass-soft pill-hover">
+          <span data-ic="search" data-ics="16"></span>
+          <input type="text" id="examSearch" placeholder="Search 17+ exams — try &quot;NEET&quot; or &quot;UPSC&quot;…" aria-label="Search exams" />
+          <button type="button" class="clear" id="examSearchClear" aria-label="Clear search" style="display:none"><span data-ic="x" data-ics="14"></span></button>
+          <kbd class="kbd" style="display:none" id="examSearchKbd">/</kbd>
+        </div>
+        <p class="exam-count" id="examCount" style="display:none"></p>
+      </div>
+      <div class="exam-grid" id="examGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ WHY ============ -->
+  <section class="sec" id="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker glass-soft pill-hover rv"><span class="dot"></span>Why Preparation AI</span>
+        <h2 class="sec-title rv" style="transition-delay:.08s">Built to be <span class="se text-gradient-brand">trusted,</span> not just clicked.</h2>
+        <p class="sec-lead rv" style="transition-delay:.16s">Every layer — from question selection to proctoring — is engineered for exam-day fidelity and institutional integrity.</p>
+      </div>
+      <div class="cards-4" id="pillarsGrid"></div>
+      <div class="engine-head rv">
+        <span class="ic-box glass-soft"><span data-ic="landmark" data-ics="20"></span></span>
+        <div>
+          <h3>The engine room</h3>
+          <p class="sub">The scientific foundation under every mock, every metric, every fix.</p>
+        </div>
+        <div class="gold-rule rule" aria-hidden="true"></div>
+      </div>
+      <div class="cards-3" id="engineGrid"></div>
+      <div class="cascade glass rv">
+        <div class="lhs">
+          <span class="chip-grad" style="width:44px;height:44px"><span data-ic="video" data-ics="20"></span></span>
+          <div>
+            <p class="t">Resilience cascade</p>
+            <p class="s">Three AI tiers, zero single point of failure</p>
+          </div>
+        </div>
+        <div class="cascade-flow">
+          <span class="tier glass-soft">Z-AI</span>
+          <span class="arr">→</span>
+          <span class="tier glass-soft">Groq Llama 3.3</span>
+          <span class="arr">→</span>
+          <span class="tier glass-soft">Google Gemini</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY ============ -->
+  <section class="sec" id="journey">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker glass-soft pill-hover rv"><span class="dot"></span>The build story</span>
+        <h2 class="sec-title rv" style="transition-delay:.08s">Five chapters, <span class="se text-gradient-gold">one obsession.</span></h2>
+        <p class="sec-lead rv" style="transition-delay:.16s">Preparation AI didn&rsquo;t start as an app. It started in school corridors — and every year since has compounded into the intelligence it runs on today.</p>
+      </div>
+      <div class="timeline" id="timeline">
+        <div class="tl-base" aria-hidden="true"></div>
+        <div class="tl-fill" id="tlFill" aria-hidden="true"></div>
+        <ol id="tlList"></ol>
+        <div class="tl-terminal rv">
+          <span class="dot2" aria-hidden="true"></span>
+          <span class="rule2" aria-hidden="true"></span>
+          <p>Every chapter, one system</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VOICES ============ -->
+  <section class="sec" id="voices">
+    <div class="wrap" style="max-width:896px">
+      <div class="sec-head">
+        <span class="kicker glass-soft pill-hover rv"><span class="dot"></span>Early voices</span>
+        <h2 class="sec-title rv" style="transition-delay:.08s">The people SI was <span class="se text-gradient-gold">built for.</span></h2>
+        <p class="sec-lead rv" style="transition-delay:.16s">From the early-access cohort — droppers, aspirants, partner schools and NRI families. First names, real patterns.</p>
+      </div>
+      <div class="voices-card glass corner-glow rv" id="voicesCard" style="transition-delay:.1s">
+        <span class="voice-quote-mark" aria-hidden="true">&ldquo;</span>
+        <div class="voice-stage" id="voiceStage" aria-live="polite"></div>
+        <div class="voice-controls">
+          <button type="button" class="voice-arrow glass-soft pill-hover focus-ring" id="voicePrev" aria-label="Previous voice"><span data-ic="chevron-left" data-ics="18"></span></button>
+          <div class="voice-dots" id="voiceDots" aria-label="Voices"></div>
+          <button type="button" class="voice-arrow glass-soft pill-hover focus-ring" id="voiceNext" aria-label="Next voice"><span data-ic="chevron-right" data-ics="18"></span></button>
+        </div>
+        <div class="voice-progress" aria-hidden="true"><div class="fill" id="voiceProgressFill"></div></div>
+      </div>
+      <p class="voices-note rv" style="transition-delay:.18s">Illustrative voices from the early-access cohort · ask for the school-reference deck</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker glass-soft pill-hover rv"><span class="dot"></span>Straight answers</span>
+        <h2 class="sec-title rv" style="transition-delay:.08s">Asked often, <span class="se text-gradient-brand">answered once.</span></h2>
+        <p class="sec-lead rv" style="transition-delay:.16s">Everything people want to know before they trust an intelligence with their exam prep — in plain words.</p>
+      </div>
+      <div class="faq-list" id="faqList"></div>
+      <div style="max-width:768px;margin:24px auto 0">
+        <div class="faq-cta glass-soft rv">
+          <p class="q">Still curious about something? <span class="se text-gradient-brand">Ask the intelligence itself.</span></p>
+          <div class="btns">
+            <a href="#contact" class="g-btn focus-ring" style="padding:10px 16px;border-radius:12px;font-size:12.5px;font-weight:600">Contact the founder</a>
+            <button type="button" class="cta xs btn-shine focus-ring" id="faqOpenApp">Open the app <span data-ic="arrow-right" data-ics="14"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUDIENCE ============ -->
+  <section class="sec" id="audience">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker glass-soft pill-hover rv"><span class="dot"></span>Who it&rsquo;s for</span>
+        <h2 class="sec-title rv" style="transition-delay:.08s">One platform, <span class="se text-gradient-brand">three kinds of people.</span></h2>
+      </div>
+      <div class="cards-3" id="audienceGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker glass-soft pill-hover rv"><span class="dot"></span>Contact</span>
+        <h2 class="sec-title rv" style="transition-delay:.08s">Talk to the <span class="se text-gradient-gold">founder.</span></h2>
+        <p class="sec-lead rv" style="transition-delay:.16s">For partnerships, investment or institutional access — reach Kiran Challa directly.</p>
+      </div>
+      <div class="cards-3" id="contactGrid" style="margin-top:48px"></div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final-cta">
+    <div class="wrap">
+      <div class="final-panel glass rv">
+        <div class="final-glow" aria-hidden="true"></div>
+        <div style="position:relative">
+          <span class="final-medal logo-medal"><span class="logo-img" role="img" aria-label="Preparation AI — graduation cap over a neural-network brain"></span></span>
+          <h2 class="final-h2">Your next mock test is <span class="se text-gradient-brand">one click away.</span></h2>
+          <p class="final-p">Pick your exam, take a pattern-true mock paper, and see exactly what to fix first. The intelligence is already waiting.</p>
+          <div class="final-btns">
+            <button type="button" class="cta btn-shine focus-ring" id="finalOpenApp">
+              Open the app console <span data-ic="arrow-right" data-ics="18"></span>
+            </button>
+            <a href="https://www.instagram.com/preparation.ai/" target="_blank" rel="noopener noreferrer" class="g-btn g-btn-hero focus-ring">
+              <span class="ig-ic" data-ic="instagram" data-ics="18"></span> Follow the journey
+            </a>
+          </div>
+          <div class="final-facts" id="finalFacts"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="gold-rule footer-rule" aria-hidden="true"></div>
+    <div class="footer-card glass">
+      <div class="footer-top">
+        <a href="#top" class="footer-brand focus-ring">
+          <span class="logo-blend"><span class="logo-img" role="img" aria-label="Preparation AI logo"></span></span>
+          <span class="t">Preparation<span class="text-gradient-brand">AI</span></span>
+        </a>
+        <nav class="footer-nav" aria-label="Footer">
+          <ul>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#agents">Agents</a></li>
+            <li><a href="#exams">Exams</a></li>
+            <li><a href="#why">Why SI</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/preparation.ai/" target="_blank" rel="noopener noreferrer" aria-label="Preparation AI on Instagram" class="glass-soft focus-ring ig"><span data-ic="instagram" data-ics="17"></span></a>
+          <a href="https://www.linkedin.com/in/kiran-challa-9b3167359/" target="_blank" rel="noopener noreferrer" aria-label="Kiran Challa on LinkedIn" class="glass-soft focus-ring li"><span data-ic="linkedin" data-ics="17"></span></a>
+          <a href="mailto:kkchalla@outlook.com" aria-label="Email Kiran Challa" class="glass-soft focus-ring"><span data-ic="mail" data-ics="17"></span></a>
+        </div>
+      </div>
+      <div class="footer-sign">
+        <p class="crafted">Crafted with <span class="heart-beat" data-ic="heart" data-ics="16" aria-label="love" data-icfill="1"></span> by <b class="text-gradient-brand">Kiran Challa</b></p>
+        <p class="founder">Founder of Preparation AI</p>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="yearNow">2025</span> Preparation AI — AI Educational Operating System</p>
+        <p>preparationai.si · single-file HTML edition</p>
+      </div>
+    </div>
+    <div class="safe-area" aria-hidden="true"></div>
   </div>
-</div></section>
+</footer>
 
-<section id="contact" style="padding-top:20px"><div class="wrap">
-  <div class="ch"><span class="kick rv">Contact</span><h2 class="rv">Talk to the <span class="se">founder.</span></h2><p class="lead rv">For partnerships, investment or institutional access, reach Kiran Challa directly.</p></div>
-  <div class="ct">
-    <div class="glass lift ci rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect pathLength="1" x="3" y="5" width="18" height="14" rx="3"/><path pathLength="1" class="a" d="M4 7.5l8 6 8-6"/></svg></div><div><small>Email</small><b><a href="mailto:kkchalla@outlook.com">kkchalla@outlook.com</a></b><button class="cp" data-c="kkchalla@outlook.com">Copy</button></div></div>
-    <div class="glass lift ci rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M6.5 3.5l3 .8 1 4-2 1.3a11 11 0 0 0 5 5l1.3-2 4 1 .8 3c-.3 2-1.8 3.2-3.8 3.2C10.3 20.8 3.2 13.7 3.2 7.3c0-2 1.2-3.5 3.3-3.8z"/></svg></div><div><small>Phone</small><b><a href="tel:+919515569545">+91 95155 69545</a></b><b><a href="tel:+918978152333">+91 89781 52333</a></b></div></div>
-    <div class="glass lift ci rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect pathLength="1" x="3.5" y="3.5" width="17" height="17" rx="3"/><path pathLength="1" d="M8 10.5V16M11.5 16v-5.5"/><path pathLength="1" class="a" d="M11.5 13c0-1.7 1-2.6 2.4-2.6s2.1 1 2.1 2.6V16"/></svg></div><div><small>LinkedIn</small><b><a href="https://www.linkedin.com/in/kiran-challa-9b3167359/" target="_blank" rel="noopener">in/kiran-challa</a></b></div></div>
-    <div class="glass lift ci rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle pathLength="1" cx="12" cy="12" r="9"/><path pathLength="1" d="M3 12h18"/><path pathLength="1" class="a" d="M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div><div><small>PreparationAI</small><b><a href="https://preparationai.si" target="_blank" rel="noopener">preparationai.si</a></b><b><a href="https://preparation-ai.vercel.app" target="_blank" rel="noopener">Open the app</a></b></div></div>
-    <a class="glass lift ci rv" href="https://www.instagram.com/preparation.ai/" target="_blank" rel="noopener"><span class="ig"><svg><use href="#insta"/></svg></span><div><small>Instagram</small><b>@preparation.ai</b></div></a>
-    <div class="glass lift ci rv"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path pathLength="1" d="M12 21s6-5.6 6-10.5A6 6 0 0 0 6 10.5C6 15.4 12 21 12 21z"/><circle pathLength="1" class="a" cx="12" cy="10.5" r="2.2"/></svg></div><div><small>Based in</small><b>Hyderabad, India</b><small>India · Kuwait · GCC</small></div></div>
+<!-- ============ BACK TO TOP ============ -->
+<button type="button" class="back-top glass focus-ring" id="backTop" aria-label="Back to top">
+  <svg class="ring" viewBox="0 0 48 48" aria-hidden="true">
+    <circle cx="24" cy="24" r="23" fill="none" stroke="rgba(11,18,38,0.07)" stroke-width="2.5" id="bttTrack" />
+    <circle cx="24" cy="24" r="23" fill="none" stroke="url(#bttGrad)" stroke-width="2.5" stroke-linecap="round" id="bttFill" stroke-dasharray="144.5" stroke-dashoffset="144.5" />
+    <defs>
+      <linearGradient id="bttGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#0369a1" /><stop offset="60%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#d4af37" />
+      </linearGradient>
+    </defs>
+  </svg>
+  <span class="ic-up" data-ic="arrow-up" data-ics="20"></span>
+</button>
+
+<!-- ============ COMPARE TRAY ============ -->
+<div class="cmp-tray glass" id="cmpTray" role="region" aria-label="Comparison tray" style="display:none">
+  <span class="lbl">Compare</span>
+  <div class="cmp-chips" id="cmpChips"></div>
+  <button type="button" class="cta sm btn-shine" id="cmpOpen" style="border-radius:999px">Compare</button>
+  <button type="button" class="cmp-clear" id="cmpClear">Clear</button>
+</div>
+
+<!-- ============ DIALOGS ============ -->
+<div class="dlg-backdrop" id="dlgBackdrop" aria-hidden="true"></div>
+
+<!-- agent dialog -->
+<div class="dlg glass" id="agentDialog" role="dialog" aria-modal="true" aria-label="Agent details">
+  <div class="dialog-fade" aria-hidden="true"></div>
+  <button type="button" class="dlg-close focus-ring" id="agentDialogClose" aria-label="Close dialog"><span data-ic="x" data-ics="16"></span></button>
+  <div id="agentDialogBody"></div>
+</div>
+
+<!-- exam dialog -->
+<div class="dlg glass" id="examDialog" role="dialog" aria-modal="true" aria-label="Exam pattern">
+  <div class="dialog-fade" aria-hidden="true"></div>
+  <button type="button" class="dlg-close focus-ring" id="examDialogClose" aria-label="Close dialog"><span data-ic="x" data-ics="16"></span></button>
+  <div id="examDialogBody"></div>
+</div>
+
+<!-- compare dialog -->
+<div class="dlg glass" id="cmpDialog" role="dialog" aria-modal="true" aria-label="Exam comparison">
+  <div class="dialog-fade" aria-hidden="true"></div>
+  <button type="button" class="dlg-close focus-ring" id="cmpDialogClose" aria-label="Close dialog"><span data-ic="x" data-ics="16"></span></button>
+  <div id="cmpDialogBody"></div>
+</div>
+
+<!-- app console -->
+<div class="dlg wide glass app-console" id="consoleDialog" role="dialog" aria-modal="true" aria-label="Preparation AI app console — interactive preview">
+  <div class="dialog-fade" aria-hidden="true"></div>
+  <button type="button" class="dlg-close focus-ring" id="consoleDialogClose" aria-label="Close dialog"><span data-ic="x" data-ics="16"></span></button>
+  <div id="consoleBody"></div>
+</div>
+
+<!-- ============ COMMAND PALETTE ============ -->
+<div class="dlg-backdrop" id="palBackdrop" aria-hidden="true" style="z-index:74"></div>
+<div class="palette-panel glass" id="palettePanel" role="dialog" aria-modal="true" aria-label="Command palette">
+  <div class="pal-search wash-soft">
+    <span data-ic="search" data-ics="18"></span>
+    <input type="text" id="palInput" placeholder="Search exams, agents, sections and actions…" aria-label="Search the site" />
+    <button type="button" class="clear" id="palClear" style="display:none">clear</button>
+    <kbd class="esc" id="palEsc">esc</kbd>
   </div>
-</div></section>
+  <div class="pal-list" id="palList"></div>
+  <div class="pal-foot">
+    <span class="keys"><kbd class="kbd">↑↓</kbd> navigate <kbd class="kbd" style="margin-left:4px">↵</kbd> select</span>
+    <span class="mem"><span data-ic="history" data-ics="12"></span> the palette remembers your last 5</span>
+    <button type="button" class="sc-btn focus-ring" id="palShortcuts"><kbd style="font-family:ui-monospace,monospace">?</kbd> shortcuts</button>
+  </div>
+</div>
 
-<div class="wrap"><div class="glass final rv">
-  <div class="fl" role="img" aria-label="PreparationAI — Educational OS"></div>
-  <h2>Your next mock test is <span class="se">one click away.</span></h2>
-  <p class="lead" style="margin-inline:auto">Pick your exam, take a mock paper, and see exactly what to fix first.</p>
-  <div class="cta"><a class="btn p" href="https://preparation-ai.vercel.app" target="_blank" rel="noopener">Open PreparationAI</a><a class="btn g" href="mailto:kkchalla@outlook.com">Talk to the founder</a></div>
-</div></div>
+<!-- ============ SHORTCUTS SHEET ============ -->
+<div class="dlg-backdrop" id="scBackdrop" aria-hidden="true" style="z-index:74"></div>
+<div class="sc-panel glass" id="scPanel" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
+  <div class="sc-head wash-soft">
+    <p class="t"><span class="ic-box"><span data-ic="keyboard" data-ics="16"></span></span> Keyboard shortcuts</p>
+    <button type="button" class="sc-close focus-ring" id="scClose" aria-label="Close shortcuts"><span data-ic="x" data-ics="16"></span></button>
+  </div>
+  <div class="sc-body" id="scBody"></div>
+  <div class="sc-foot">
+    <span>Every control on this site is keyboard-reachable.</span>
+    <button type="button" class="sc-btn focus-ring" id="scPal" style="border:1px solid rgba(255,255,255,.8);background:rgba(255,255,255,.7);border-radius:8px;padding:2px 8px;font-family:ui-monospace,monospace;font-size:10.5px;font-weight:600">⌘K palette</button>
+  </div>
+</div>
 
-<footer><div class="wrap">
-  <div class="flinks"><a href="#how">How it works</a><a href="#agents">Agents</a><a href="#why">Why SI</a><a href="#contact">Contact</a></div>
-  <div class="glass craft"><span>Crafted by</span><svg aria-label="love"><use href="#heart"/></svg><b>Kiran Challa</b></div>
-  <div class="fn"><span>© 2026 PreparationAI · Educational OS</span><a class="ig" href="https://www.instagram.com/preparation.ai/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#insta"/></svg></a><span>Hyderabad · Kuwait · GCC</span></div>
-</div></footer>
-
-<script src="js/main.js" defer></script>
+<!-- ============ TOASTS ============ -->
+<div class="toast-root" id="toastRoot" aria-live="polite"></div>
+<!-- @@BODY@@ -->
+<script src="js/main.js"></script>
 </body>
 </html>
