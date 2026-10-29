@@ -979,9 +979,6 @@ main { position: relative; z-index: 10; flex: 1; }
 @media (min-width: 1280px) { .search-pill { display: flex; } .search-icon-btn { display: none; } }
 .search-icon-btn { display: flex; }
 @media (min-width: 1280px) { .search-icon-btn { display: none; } }
-.insta-nav { display: none; color: var(--sky); transition: color 0.3s ease; }
-.insta-nav:hover { color: #e1306c; }
-@media (min-width: 1280px) { .insta-nav { display: flex; } }
 .open-app-nav {
   display: none; align-items: center; gap: 6px; height: 36px; padding: 0 16px; border-radius: 12px;
   font-size: 13.5px; font-weight: 600; color: #fff; white-space: nowrap;
@@ -1592,7 +1589,7 @@ main { position: relative; z-index: 10; flex: 1; }
 }
 .footer-sign .crafted { font-family: var(--font-display); font-size: 15px; font-weight: 600; letter-spacing: 0.01em; color: var(--soft); }
 @media (min-width: 640px) { .footer-sign .crafted { font-size: 16px; } }
-.footer-sign .crafted .heart { display: inline-block; margin: 0 2px; vertical-align: -2px; color: #e11d48; }
+.footer-sign .crafted .heart { display: inline-block; margin: 0 2px; vertical-align: -2px; color: #e3132d; filter: drop-shadow(0 2px 6px rgba(227,19,45,0.35)); }
 .footer-sign .crafted b { font-weight: 700; }
 .footer-sign .founder { font-size: 12px; font-weight: 500; color: #6b7490; }
 .dark .footer-sign .founder { color: #8b97b8; }
@@ -1601,7 +1598,7 @@ main { position: relative; z-index: 10; flex: 1; }
   gap: 8px; font-size: 11.5px; font-weight: 500; color: #6b7490;
 }
 .dark .footer-bottom { color: #8b97b8; }
-@media (min-width: 640px) { .footer-bottom { flex-direction: row; } }
+@media (min-width: 640px) { .footer-bottom { flex-direction: row; justify-content: center; } }
 .safe-area { height: env(safe-area-inset-bottom, 0px); }
 
 /* ================= BACK TO TOP ================= */
