@@ -549,13 +549,13 @@ function renderHowPanel() {
     html += '<div class="viz-stack">' +
       '<div class="viz-chart-head"><p class="viz-title">Topic climb</p><span class="viz-up">' + ic("trending-up", 14) + '+18%</span></div>' +
       '<svg viewBox="0 0 320 150" style="width:100%">' +
-        '<defs><linearGradient id="climbFill' + howActive + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(14,165,233,0.28)"/><stop offset="100%" stop-color="rgba(14,165,233,0)"/></linearGradient>' +
-        '<linearGradient id="climbLine' + howActive + '" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0369a1"/><stop offset="70%" stop-color="#0ea5e9"/><stop offset="100%" stop-color="#d4af37"/></linearGradient></defs>' +
+        '<defs><linearGradient id="climbFill' + howActive + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(232,144,31,0.26)"/><stop offset="100%" stop-color="rgba(232,144,31,0)"/></linearGradient>' +
+        '<linearGradient id="climbLine' + howActive + '" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c4680a"/><stop offset="70%" stop-color="#e8901f"/><stop offset="100%" stop-color="#f6ad45"/></linearGradient></defs>' +
         [30, 60, 90, 120].map(function (y) { return '<line x1="10" x2="310" y1="' + y + '" y2="' + y + '" stroke="rgba(11,18,38,0.06)" stroke-dasharray="4 6"/>'; }).join("") +
         '<path d="M20 122 L75 108 L130 112 L185 78 L240 62 L295 30" fill="none" stroke="url(#climbLine' + howActive + ')" stroke-width="3.5" stroke-linecap="round"/>' +
         '<path d="M20 122 L75 108 L130 112 L185 78 L240 62 L295 30 L295 140 L20 140 Z" fill="url(#climbFill' + howActive + ')"/>' +
         [[20, 122], [75, 108], [130, 112], [185, 78], [240, 62], [295, 30]].map(function (p, i) {
-          return '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="5" fill="#fff" stroke="' + (i === 5 ? "#d4af37" : "#0284c7") + '" stroke-width="2.5"/>';
+          return '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="5" fill="#fff" stroke="' + (i === 5 ? "#f6ad45" : "#e8901f") + '" stroke-width="2.5"/>';
         }).join("") +
       '</svg>' +
       '<div class="viz-x-labels"><span>Test 3</span><span>Test 5</span><span>Test 7</span><span>Test 9</span></div></div>';
@@ -591,7 +591,7 @@ function renderAgents() {
       '<span class="pill pill-cyan" style="letter-spacing:.12em">' + a.role + '</span></div>' +
       '<h3>' + a.name + '</h3><p class="sh">' + a.short + '</p>' +
       '<div class="foot"><span class="dots">' +
-        '<i style="background:#0ea5e9"></i><i style="background:#38bdf8"></i><i style="background:#d4af37"></i></span>' +
+        '<i style="background:#c4680a"></i><i style="background:#e8901f"></i><i style="background:#f6ad45"></i></span>' +
       '<span class="inspect">' + ic("mouse-pointer-click", 12) + ' Inspect agent</span></div></div>';
     card.addEventListener("click", function () { openAgent(a); });
     card.addEventListener("keydown", function (e) {
@@ -1614,6 +1614,7 @@ function boot() {
   onScroll();
   initSpy();
   initReveal();
+  initFooterMark();
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener("click", function (ev) {
       var id = a.getAttribute("href").slice(1);
@@ -1623,6 +1624,38 @@ function boot() {
         t.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
+  });
+}
+/* footer wordmark: letters warm up under the cursor (touch: a tap lights it briefly) */
+function initFooterMark() {
+  var mark = $("pfMark");
+  if (!mark) return;
+  var raf = 0, px = 0, py = 0;
+  var base = mark.querySelector(".base");
+  function fit() {
+    mark.style.fontSize = "100px";
+    var w = base.scrollWidth;
+    if (w) mark.style.fontSize = Math.floor(100 * mark.clientWidth / w * 0.995) + "px";
+  }
+  fit();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  window.addEventListener("resize", fit);
+  function move(ev) {
+    var r = mark.getBoundingClientRect();
+    px = ev.clientX - r.left; py = ev.clientY - r.top;
+    if (!raf) raf = requestAnimationFrame(function () {
+      raf = 0;
+      mark.style.setProperty("--mx", px + "px");
+      mark.style.setProperty("--my", py + "px");
+    });
+  }
+  mark.addEventListener("pointermove", move);
+  mark.addEventListener("pointerdown", function (ev) {
+    move(ev);
+    if (ev.pointerType !== "mouse") {
+      mark.classList.add("lit");
+      setTimeout(function () { mark.classList.remove("lit"); }, 1400);
+    }
   });
 }
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
