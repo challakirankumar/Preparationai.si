@@ -10,7 +10,7 @@ Static marketing site for PreparationAI, deployed on Cloudflare Workers (static 
 │   ├── index.html          page markup
 │   ├── 404.html            shown for unknown URLs
 │   ├── css/styles.css      base styling (layout, components, night edition)
-│   ├── css/premium.css     premium edition: white canvas, navy + amber, condensed headlines, navy footer
+│   ├── css/premium.css     premium edition: white canvas, midnight blue + champagne gold, condensed headlines
 │   ├── js/main.js          all page content and interactivity (orbit, agents, exams, timeline,
 │   │                       voices, FAQ, command palette ⌘K, app console, day/night theme)
 │   ├── assets/img/         logos (logo-mark.png is the brain/cap mark), favicons, social preview image
